@@ -8,8 +8,8 @@
 class Leto_Blog extends WP_Widget {
 
 	public function __construct() {
-		$widget_ops = array('classname' => 'leto_blog_widget', 'description' => __( 'Show the latest news from your blog.', 'leto') );
-        parent::__construct(false, $name = __('Leto: Blog', 'leto'), $widget_ops);
+		$widget_ops = array('classname' => 'leto_blog_widget', 'description' => __( 'Show the latest news from your blog.', 'Royal Store') );
+        parent::__construct(false, $name = __('Leto: Blog', 'Royal Store'), $widget_ops);
 		$this->alt_option_name = 'leto_blog_widget';
 		
     }
@@ -21,13 +21,13 @@ class Leto_Blog extends WP_Widget {
 	?>
 
 	<p>
-	<label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title', 'leto'); ?></label>
+	<label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title', 'Royal Store'); ?></label>
 	<input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo $title; ?>" />
 	</p>
 
-	<p><label for="<?php echo $this->get_field_id('category'); ?>"><?php _e('Pick a category to display posts from:', 'leto'); ?></label>
+	<p><label for="<?php echo $this->get_field_id('category'); ?>"><?php _e('Pick a category to display posts from:', 'Royal Store'); ?></label>
 		<?php $args = array(
-			'show_option_none'   => __( 'Show posts from all categories', 'leto'),
+			'show_option_none'   => __( 'Show posts from all categories', 'Royal Store'),
 			'name'               => $this->get_field_name('category'),
 			'id'                 => $this->get_field_id('category'),
 			'class'              => 'chosen-dropdown',
@@ -36,7 +36,7 @@ class Leto_Blog extends WP_Widget {
        	<?php wp_dropdown_categories($args); ?>
     </p>  
 
-	<p><label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php _e( 'Number of posts to show:', 'leto' ); ?></label>
+	<p><label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php _e( 'Number of posts to show:', 'Royal Store' ); ?></label>
 	<input class="tiny-text" id="<?php echo $this->get_field_id( 'number' ); ?>" name="<?php echo $this->get_field_name( 'number' ); ?>" type="number" step="1" min="1" value="<?php echo $number; ?>" size="3" /></p>
 
 	<?php
